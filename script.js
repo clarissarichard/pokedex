@@ -8,9 +8,14 @@ async function fetchAllPokemon() {
 }
 
 function displayPokemon(pokemonList) {
-    const grid = document.getElementById('pokeGrid');
+    const grid = document.querySelector('.pokemon-grid');
 
-    grid.innerHTML = pokemonList.map(pokemon => `<div>${pokemon.name}</div>`).join('');
+    grid.innerHTML = pokemonList
+        .map((pokemon) => {
+            const entryNumber = pokemon.url.split('/').filter(Boolean).pop();
+            return `<div>${pokemon.name} #${entryNumber.padStart(4, '0')}</div>`;
+        })
+        .join('');
 }
 
 fetchAllPokemon();
