@@ -6,18 +6,19 @@
 - Node.js and npm
 
 ### Installation
+Install project dependencies:
 ```bash
 npm install
 ```
 
 ### Running the Project
-The app must be served over HTTP (not `file://`) due to ES module security restrictions.
+This app must be served over HTTP (not `file://`) due to ES module security restrictions.
 
-Using `http-server`:
+1. Run `http-server`:
 ```bash
 npx http-server
 ```
-Then open `http://localhost:8080` in your browser.
+2. Open `http://localhost:8080` in browser.
 
 ### Running Tests
 ```bash
