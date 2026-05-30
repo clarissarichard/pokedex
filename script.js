@@ -18,6 +18,7 @@ function getPokemonDetails(pokemon) {
         name: pokemon.name,
         id: String(pokemon.id).padStart(4, "0"),
         photo: pokemon.sprites.front_default,
+        types: pokemon.types.map(type => type.type.name)
     };
 }
 
@@ -31,6 +32,7 @@ function displayPokemon(pokemonList) {
                     <div class="pokemon-id">#${pokemon.id}</div>
                     <div class="pokemon-photo"><img src="${pokemon.photo}" alt="Photo of ${pokemon.name}"></div>
                     <div class="pokemon-name">${pokemon.name}</div>
+                    <div class="pokemon-types">${pokemon.types.join(", ")}</div>
                 </div>
             `;
         })

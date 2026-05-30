@@ -35,3 +35,7 @@ p {
     text-transform: capitalize;
     margin-top: 10px;
 }
+.pokemon-types {
+    margin-top: 5px;
+    color: #555;
+}
