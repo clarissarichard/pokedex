@@ -1,9 +1,8 @@
+import { POKEAPI_BASE_URL, POKEMON_FETCH_LIMIT } from "./constants.js";
 import { getPokemonDetails, renderPokemonCards } from "./pokemon.js";
 
-const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2";
-
 async function fetchAllPokemon() {
-    const response = await fetch(`${POKEAPI_BASE_URL}/pokemon?limit=10`);
+    const response = await fetch(`${POKEAPI_BASE_URL}/pokemon?limit=${POKEMON_FETCH_LIMIT}`);
     const data = await response.json();
     const pokemonDetails = await Promise.all(
         data.results.map(async (pokemon) => {
