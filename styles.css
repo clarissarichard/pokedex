@@ -36,6 +36,14 @@ p {
     margin-top: 10px;
 }
 .pokemon-types {
-    margin-top: 5px;
+    margin-top: 10px;
+}
+.pokemon-type {
+    display: inline-block;
     color: #555;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    text-transform: capitalize;
 }
