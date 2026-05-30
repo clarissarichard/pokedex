@@ -9,7 +9,7 @@ export function getPokemonDetails(pokemon) {
 
 export function renderTypeBadges(types) {
     return types
-        .map((type) => `<span class="pokemon-type">${type}</span>`)
+        .map((type) => `<span class="pokemon-type ${type}">${type}</span>`)
         .join("");
 }
 

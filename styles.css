@@ -40,10 +40,35 @@ p {
 }
 .pokemon-type {
     display: inline-block;
-    color: #555;
     border: 1px solid #ccc;
     padding: 2px 8px;
     border-radius: 12px;
-    background-color: #f7f7f7;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+.pokemon-type.bug {
+    background-color: #a8b820;
+}
+.pokemon-type.electric {
+    background-color: #f8d030;
+}
+.pokemon-type.fire {
+    background-color: #f08030;
+}
+.pokemon-type.flying {
+    background-color: #a890f0;
+}
+.pokemon-type.grass {
+    background-color: #78c850;
+}
+.pokemon-type.normal {
+    background-color: #a8a878;
+}
+.pokemon-type.poison {
+    background-color: #a040a0;
+}
+.pokemon-type.water {
+    background-color: #76c7c0;
 }
