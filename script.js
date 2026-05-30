@@ -16,19 +16,25 @@ async function fetchAllPokemon() {
 function getPokemonDetails(pokemon) {
     return {
         name: pokemon.name,
-        id: pokemon.id,
+        id: String(pokemon.id).padStart(4, "0"),
         photo: pokemon.sprites.front_default,
     };
 }
 
 function displayPokemon(pokemonList) {
-    const grid = document.querySelector('.pokemon-grid');
+    const grid = document.querySelector(".pokemon-grid");
 
     grid.innerHTML = pokemonList
         .map((pokemon) => {
-          return `<div>${pokemon.name} #${String(pokemon.id).padStart(4, '0')} <br><img src="${pokemon.photo}" alt="Photo of ${pokemon.name}"></div>`;
+            return `
+                <div class="pokemon-card">
+                    <div class="pokemon-id">#${pokemon.id}</div>
+                    <div class="pokemon-photo"><img src="${pokemon.photo}" alt="Photo of ${pokemon.name}"></div>
+                    <div class="pokemon-name">${pokemon.name}</div>
+                </div>
+            `;
         })
-        .join('');
+        .join("");
 }
 
 fetchAllPokemon();

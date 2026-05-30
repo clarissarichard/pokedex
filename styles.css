@@ -12,11 +12,26 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.pokemon-grid div {
+.pokemon-card {
     background-color: white;
-    padding: 16px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
+    border: 2px solid transparent;
+}
+.pokemon-id {
+    color: #999;
+    margin-bottom: 5px;
+}
+.pokemon-photo img {
+    width: 100px;
+    height: 100px;
+}
+.pokemon-name {
+    color:#333;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 10px;
 }
