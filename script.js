@@ -1,5 +1,6 @@
-const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2";
 import { getPokemonDetails, renderPokemonCards } from "./pokemon.js";
+
+const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2";
 
 async function fetchAllPokemon() {
     const response = await fetch(`${POKEAPI_BASE_URL}/pokemon?limit=10`);
@@ -12,15 +13,6 @@ async function fetchAllPokemon() {
         })
     );
     displayPokemon(pokemonDetails);
-}
-
-function getPokemonDetails(pokemon) {
-    return {
-        name: pokemon.name,
-        id: String(pokemon.id).padStart(4, "0"),
-        photo: pokemon.sprites.front_default,
-        types: pokemon.types.map(t => t.type.name)
-    };
 }
 
 function displayPokemon(pokemonList) {
