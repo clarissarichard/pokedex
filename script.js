@@ -1,4 +1,5 @@
 const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2";
+import { getPokemonDetails, renderPokemonCards } from "./pokemon.js";
 
 async function fetchAllPokemon() {
     const response = await fetch(`${POKEAPI_BASE_URL}/pokemon?limit=10`);
@@ -25,22 +26,7 @@ function getPokemonDetails(pokemon) {
 function displayPokemon(pokemonList) {
     const grid = document.querySelector(".pokemon-grid");
 
-    grid.innerHTML = pokemonList
-        .map((pokemon) => {
-            const typeBadges = pokemon.types
-                .map((type) => `<span class="pokemon-type">${type}</span>`)
-                .join("");
-
-            return `
-                <div class="pokemon-card">
-                    <div class="pokemon-id">#${pokemon.id}</div>
-                    <div class="pokemon-photo"><img src="${pokemon.photo}" alt="Photo of ${pokemon.name}"></div>
-                    <div class="pokemon-name">${pokemon.name}</div>
-                    <div class="pokemon-types">${typeBadges}</div>
-                </div>
-            `;
-        })
-        .join("");
+    grid.innerHTML = renderPokemonCards(pokemonList);
 }
 
 fetchAllPokemon();
