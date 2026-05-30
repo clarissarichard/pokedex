@@ -1,0 +1,25 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "This application uses the [PokéAPI](https://pokeapi.co/api/v2) to render informative Pokémon cards.",
+  "main": "script.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarissarichard/pokedex.git"
+  },
+  "keywords": [],
+  "author": "Clarissa Richard",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/clarissarichard/pokedex/issues"
+  },
+  "homepage": "https://github.com/clarissarichard/pokedex#readme",
+  "devDependencies": {
+    "vitest": "^4.1.7"
+  }
+}
