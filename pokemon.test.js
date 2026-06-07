@@ -7,6 +7,14 @@ import {
     renderTypeBadges
 } from "./pokemon.js";
 
+describe("tests PokeAPI", () => {
+    it("returns status code of 200", async () => {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1");
+        expect(response.status).toBe(200);
+        expect(response.ok).toBe(true);
+    });
+});
+
 describe("tests getPokemonDetails", () => {
     it("normalizes id, photo, and types", () => {
         const apiPokemon = {
