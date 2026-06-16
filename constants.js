@@ -1,5 +1,5 @@
 export const POKEAPI_BASE_URL = "https://pokeapi.co/api/v2";
-export const POKEMON_FETCH_LIMIT = 10;
+export const POKEMON_FETCH_LIMIT = 1025; // set to 1025 to fetch all
 export const TYPE_CHART = {
     fire: {
         strongAgainst: ["bug", "grass", "ice", "steel"],
