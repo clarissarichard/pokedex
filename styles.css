@@ -4,9 +4,11 @@ body {
 }
 h1 {
     color: rgb(59, 76, 202);
+    text-align: center;
 }
-p {
+.subtitle {
     color: rgb(204, 0, 0);
+    text-align: center;
 }
 .pokemon-grid {
     display: grid;
@@ -63,11 +65,23 @@ p {
 .pokemon-type.grass {
     background-color: #78c850;
 }
+.pokemon-type.ground {
+    background-color: #e0c068;
+}
+.pokemon-type.ice {
+    background-color: #98d8d8;
+}
 .pokemon-type.normal {
     background-color: #a8a878;
 }
 .pokemon-type.poison {
     background-color: #a040a0;
+}
+.pokemon-type.psychic {
+    background-color: #f85888;
+}
+.pokemon-type.rock {
+    background-color: #b8a038;
 }
 .pokemon-type.water {
     background-color: #76c7c0;
