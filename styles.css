@@ -10,6 +10,15 @@ h1 {
     color: rgb(204, 0, 0);
     text-align: center;
 }
+.search-bar { /* update to a percentage-based width */
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
 .pokemon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
